@@ -47,6 +47,14 @@ class Image:
     #   on retourne une nouvelle image binarisee
     #==============================================================================
     def binarisation(self, S):
+        new_Image = Image
+        for c in (0,self.W)
+            for l in (0,self.H)
+                if Self.Image[l][c] < S ;
+                    new_Image[l][c] = 0
+                else ;
+                    new_Image[l][c] =255
+        
         pass
 
 
