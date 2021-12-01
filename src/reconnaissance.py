@@ -12,5 +12,15 @@ def lecture_modeles(chemin_dossier):
 
 
 def reconnaissance_chiffre(image, liste_modeles, S):
-    pass
-
+    res=0
+    simmax=0
+    im = image.localisation()
+    for i in range (len(liste_modeles)):
+        H = liste_modeles[i].H
+        W = liste_modeles[i].W
+        im = im.resize(H, W)
+        sim = im.similitude(liste_modeles[i])
+        if sim > simmax :
+            simmax = sim
+            res = i
+    return res
